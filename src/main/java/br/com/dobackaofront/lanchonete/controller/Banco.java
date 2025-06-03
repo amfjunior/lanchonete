@@ -15,18 +15,20 @@ public class Banco {
     private String url;
     private String usuario;
     private String senha;
+    private String banco;
     
     //Construtor da conexão
     public Banco(){
         url = "jdbc:mysql://162.241.60.224:3306";
         usuario = "oppea895_estudos";
         senha = "@Jr102915#";
+        banco = "oppea895_estudos";
         
         inicializarBanco(url, usuario, senha);
     }
     
     //Conexão com o banco de dados
-    public Connection conectar(String banco){
+    public Connection conectar(){
         try{
             url += "/" + banco;
             Connection conexao = DriverManager.getConnection(url, usuario, senha);

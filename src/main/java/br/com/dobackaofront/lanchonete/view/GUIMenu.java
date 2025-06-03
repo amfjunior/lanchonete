@@ -243,6 +243,8 @@ public class GUIMenu extends javax.swing.JFrame {
                     Lanche lanche = new Lanche(nome, precoConvertido);
                     lanche.apresentarLanche();
                     
+                    lanche.salvar(lanche);
+                    
                     jTextFieldCadastroLanche.setText("");
                     jTextFieldCadastroLanchePreco.setText("");
                     
@@ -271,21 +273,10 @@ public class GUIMenu extends javax.swing.JFrame {
         jInternalFrameCadastroLanche.setVisible(false);
     }//GEN-LAST:event_jButtonCadastroLancheCancelarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        GUIMenu janelaPrincipal = new GUIMenu();
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                janelaPrincipal.setVisible(true);
-                janelaPrincipal.jInternalFrameCadastroLanche.setVisible(false);
-            }
-        });
+    public JInternalFrame getJInternalFrameCadastroLanche(){
+        return jInternalFrameCadastroLanche;
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCadastroLacheSalvar;
     private javax.swing.JButton jButtonCadastroLancheCancelar;
