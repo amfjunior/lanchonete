@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS oppea895_estudos;
+USE oppea895_estudos;
+
+CREATE TABLE IF NOT EXISTS lanche (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DOUBLE NOT NULL
+);
+
