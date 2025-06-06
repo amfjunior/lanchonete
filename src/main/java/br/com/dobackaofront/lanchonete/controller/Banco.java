@@ -12,10 +12,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Banco {
-    private String url;
-    private String usuario;
-    private String senha;
-    private String banco;
+    public String url;
+    public String usuario;
+    public String senha;
+    public String banco;
     
     //Construtor da conexão
     public Banco(){
@@ -24,7 +24,7 @@ public class Banco {
         senha = "@Jr102915#";
         banco = "oppea895_estudos";
         
-        inicializarBanco(url, usuario, senha);
+        //inicializarBanco(url, usuario, senha);
     }
     
     //Conexão com o banco de dados

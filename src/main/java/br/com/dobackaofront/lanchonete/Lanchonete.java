@@ -22,6 +22,9 @@ public class Lanchonete {
         GUIMenu janelaPrincipal = new GUIMenu();
         Banco b = new Banco(); //inicio o metodo banco
         Connection conexao = b.conectar();
+        
+        b.inicializarBanco(b.url, b.usuario, b.senha);
+        b = null;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
